@@ -1887,7 +1887,7 @@
          </message_body>\r
       </loc:LocateItems>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/LocateItemsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3e89d0d4-1d32-493e-85b9-130be2f04992" isOneWay="false" action="" name="OrderSearch" bindingOperationName="OrderSearch" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e8ac6db8-2050-4741-98c8-5a6c5e381d80" name="0 ordersearch base" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/LocateItemsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3e89d0d4-1d32-493e-85b9-130be2f04992" isOneWay="false" action="" name="OrderSearch" bindingOperationName="OrderSearch" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e8ac6db8-2050-4741-98c8-5a6c5e381d80" name="0 ordersearch base" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <loc:OrderSearch>\r
@@ -1912,7 +1912,28 @@
          </loc:order_search_request_message>\r
       </loc:OrderSearch>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/OrderSearchRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="61d09918-d849-4b96-bf62-1d37c93b1a6f" isOneWay="false" action="" name="OrderUpdate" bindingOperationName="OrderUpdate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dcb5e71f-b827-4074-b969-b5751825998b" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/OrderSearchRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="ffee71d4-f389-424e-914b-c0558b1509f3" name="olr ordersearch by order id"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <loc:OrderSearch>\r
+         <!--Optional:-->\r
+         <loc:order_search_request_message>\r
+        <message_header message_type="" xaction_response="" xaction_type="INSERT">
+          <datetime>2021-04-02T07:59:41.710-07:00</datetime>
+          <version>16.0</version>
+          <source>XStore</source>
+          <destination>Locate</destination>
+        </message_header>
+            <message_body>\r
+               <lookup_data order_id="2944001000010" >\r
+                  <employee_id>100</employee_id>\r
+                  <store_location location_cd="5660" system_cd="XStore"/>\r
+               </lookup_data>\r
+            </message_body>\r
+         </loc:order_search_request_message>\r
+      </loc:OrderSearch>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/OrderSearchRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="61d09918-d849-4b96-bf62-1d37c93b1a6f" isOneWay="false" action="" name="OrderUpdate" bindingOperationName="OrderUpdate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dcb5e71f-b827-4074-b969-b5751825998b" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <loc:OrderUpdate>\r
@@ -2037,7 +2058,7 @@
          </loc:product_availability_request_message>\r
       </loc:ProductAvailability>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>false</con:preemptive><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/ProductAvailabilityRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2cee0c90-25c5-4a4d-8453-d4512870d248" isOneWay="false" action="" name="ProductUpdate" bindingOperationName="ProductUpdate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5a1fc5d8-baa2-42b2-9281-224098969a28" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>false</con:preemptive><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/ProductAvailabilityRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2cee0c90-25c5-4a4d-8453-d4512870d248" isOneWay="false" action="" name="ProductUpdate" bindingOperationName="ProductUpdate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="da781177-e88a-4b29-9e7c-0d6946c3c424" name="0 productupdate base"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <loc:ProductUpdate>\r
@@ -2070,7 +2091,38 @@
          </loc:product_update_request_message>\r
       </loc:ProductUpdate>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:domain xsi:nil="true"/></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/ProductUpdateRequest"/></con:call></con:operation><con:operation id="f244a80b-98f2-4e4b-a4b6-2661f38a04fa" isOneWay="false" action="" name="StatusListRequest" bindingOperationName="StatusListRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="465414b7-191d-476b-a3d1-dc6e857f2655" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/ProductUpdateRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="971874bf-45e6-4460-a43e-a4c0ca36ae08" name="olr productupdate 1 item"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <loc:ProductUpdate>\r
+         <!--Optional:-->\r
+         <loc:product_update_request_message>\r
+            <message_header message_type="" xaction_response="" xaction_type="INSERT">
+               <datetime>2021-04-02T07:59:00.304-07:00</datetime>
+               <version>16.0</version>
+               <source>XStore</source>
+               <destination>Locate</destination>
+            </message_header>
+            <message_body>\r
+               <system_product system_code="XStore" system_product_code="1003" product_code="1003">\r
+                  <description>?</description>
+                  <department>?</department>
+                  <class>?</class>
+                  <sub_class>?</sub_class>
+                  <master_style_code>?</master_style_code>
+                  <product_locations>\r
+                     <product_location location_code="5660">\r
+                        <available_qty>102</available_qty>\r
+                        <next_po_qty>0</next_po_qty>\r
+                        <next_po_date>2021-04-10T07:59:00.304-07:00</next_po_date>\r
+                     </product_location>\r
+                  </product_locations>\r
+               </system_product>\r
+            </message_body>\r
+         </loc:product_update_request_message>\r
+      </loc:ProductUpdate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>${#Project#username}</con:username><con:password>${#Project#password}</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/ProductUpdateRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f244a80b-98f2-4e4b-a4b6-2661f38a04fa" isOneWay="false" action="" name="StatusListRequest" bindingOperationName="StatusListRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="465414b7-191d-476b-a3d1-dc6e857f2655" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@wss-time-to-live"/></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mspnix01:9005/Locate/LocateServices</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loc="http://microsretail.com/Locate">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <loc:StatusListRequest>\r
@@ -3272,4 +3324,148 @@
          </availability_update_response_message>
       </ns0:AvailabilityUpdateResponse>
    </S:Body>
-</S:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/AvailabilityUpdateResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="${#Project#username}" password="${#Project#password}" wssType="" incomingWss="" wssTimeToLive="" outgoingWss="">https://mspnix01:9005/Locate/LocateServices</con:endpoint></con:endpointStrategy><con:properties><con:property><con:name>username</con:name><con:value>posws</con:value></con:property><con:property><con:name>password</con:name><con:value>P@ssw0rd</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</S:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/AvailabilityUpdateResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="OrderSearch" id="71b03c7f-89df-4b9b-9086-2c5b3c0e5234" interface="LocatePortBinding" operation="OrderSearch"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="ordersearch success response" id="8a8db2fd-a4ad-4c3b-a68e-ab8e55be4b76" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <S:Body>
+      <ns0:OrderSearchResponse xmlns:ns0="http://microsretail.com/Locate">
+         <order_search_response_message>
+            <message_header xaction_response="OK" xaction_type="INFO">
+               <datetime>2021-04-02T18:21:39.341</datetime>
+               <version>16.0</version>
+               <source>Locate</source>
+               <destination>XStore</destination>
+            </message_header>
+            <message_body>
+               <orders>
+                  <order currency=" " ref_transaction_no="2944001000010-2" balance_due="62.55" freight="0.0" source_code=" " gift=" " ship_via_description="In Store Pick Up" ship_via="PICKUP" special_instructions="" transaction_total="69.5" transaction_tax="0.0" transaction_subtotal="69.5" order_date="2021-04-02T02:59:34.000" originating_location_description="Duy's Canadian TelCo Store" originating_location_cd="2944" originating_system_cd="XStore" order_status="polled" order_id="2944001000010" request_id="4813" under_review="N" order_additional_freight_charges="0" order_additional_charges="0" ship_complete="N" freight_tax="0">
+                     <order_type>1</order_type>
+                     <items>
+                        <item special_instructions="" tax_amount="0.0" unit_price="69.5" item_description="1003" status_date="2021-04-02T08:57:44.000" requesting_system_line_no="2" line_no="1" fulfilling_system_cd="XStore" fulfilling_location_cd="605" item_status="polled" tracking_number="" shipping_agent="" item_qty="1" item_id="1003" order_line_extended_freight="0" order_line_customization_charge="0" order_line_gift_wrap="N" order_line_ship_alone="N" order_line_ship_weight="0">
+                           <ship_to>
+                              <name>
+                                 <company_name/>
+                                 <prefix/>
+                                 <first/>
+                                 <middle/>
+                                 <last/>
+                                 <suffix/>
+                              </name>
+                              <address>
+                                 <attention/>
+                                 <address1/>
+                                 <address2/>
+                                 <address3/>
+                                 <address4/>
+                                 <apt/>
+                                 <city/>
+                                 <province/>
+                                 <postal/>
+                                 <email/>
+                                 <phone1/>
+                                 <phone2/>
+                                 <country/>
+                              </address>
+                           </ship_to>
+                           <taxes>
+                              <tax description="Tax" line_item_no="1">
+                                 <amount>0</amount>
+                              </tax>
+                           </taxes>
+                           <customizations/>
+                        </item>
+                     </items>
+                     <sold_to_customer customer_no=" ">
+                        <name>
+                           <company_name></company_name>
+                           <prefix></prefix>
+                           <first>Roger</first>
+                           <middle></middle>
+                           <last>Federer</last>
+                           <suffix></suffix>
+                        </name>
+                        <address>
+                           <address1>123 Street</address1>
+                           <address2></address2>
+                           <address3></address3>
+                           <address4></address4>
+                           <apt></apt>
+                           <city>SCARBOROUGH</city>
+                           <province>ON</province>
+                           <postal>M1W 1G9</postal>
+                           <email>duy.lam@olrretail.com</email>
+                           <phone1>2223334444</phone1>
+                           <phone2></phone2>
+                           <country>CA</country>
+                        </address>
+                     </sold_to_customer>
+                     <transaction_tenders/>
+                  </order>
+                  <order currency=" " ref_transaction_no="2944001000010-1" balance_due="95.58" freight="0.0" source_code=" " gift=" " ship_via_description="In Store Pick Up" ship_via="PICKUP" special_instructions="" transaction_total="106.2" transaction_tax="0.0" transaction_subtotal="106.2" order_date="2021-04-02T02:59:34.000" originating_location_description="Duy's Canadian TelCo Store" originating_location_cd="2944" originating_system_cd="XStore" order_status="polled" order_id="2944001000010" request_id="4812" under_review="N" order_additional_freight_charges="0" order_additional_charges="0" ship_complete="N" freight_tax="0">
+                     <order_type>1</order_type>
+                     <items>
+                        <item special_instructions="" tax_amount="0.0" unit_price="106.2" item_description="TIE WAIST SHIRT DRESS" status_date="2021-04-02T08:57:44.000" requesting_system_line_no="1" line_no="1" fulfilling_system_cd="XStore" fulfilling_location_cd="605" item_status="polled" tracking_number="" shipping_agent="" item_qty="1" item_id="1002" order_line_extended_freight="0" order_line_customization_charge="0" order_line_gift_wrap="N" order_line_ship_alone="N" order_line_ship_weight="0">
+                           <ship_to>
+                              <name>
+                                 <company_name/>
+                                 <prefix/>
+                                 <first/>
+                                 <middle/>
+                                 <last/>
+                                 <suffix/>
+                              </name>
+                              <address>
+                                 <attention/>
+                                 <address1/>
+                                 <address2/>
+                                 <address3/>
+                                 <address4/>
+                                 <apt/>
+                                 <city/>
+                                 <province/>
+                                 <postal/>
+                                 <email/>
+                                 <phone1/>
+                                 <phone2/>
+                                 <country/>
+                              </address>
+                           </ship_to>
+                           <taxes>
+                              <tax description="Tax" line_item_no="1">
+                                 <amount>0</amount>
+                              </tax>
+                           </taxes>
+                           <customizations/>
+                        </item>
+                     </items>
+                     <sold_to_customer customer_no=" ">
+                        <name>
+                           <company_name></company_name>
+                           <prefix></prefix>
+                           <first>Roger</first>
+                           <middle></middle>
+                           <last>Federer</last>
+                           <suffix></suffix>
+                        </name>
+                        <address>
+                           <address1>123 Street</address1>
+                           <address2></address2>
+                           <address3></address3>
+                           <address4></address4>
+                           <apt></apt>
+                           <city>SCARBOROUGH</city>
+                           <province>ON</province>
+                           <postal>M1W 1G9</postal>
+                           <email>duy.lam@olrretail.com</email>
+                           <phone1>2223334444</phone1>
+                           <phone2></phone2>
+                           <country>CA</country>
+                        </address>
+                     </sold_to_customer>
+                     <transaction_tenders/>
+                  </order>
+               </orders>
+            </message_body>
+         </order_search_response_message>
+      </ns0:OrderSearchResponse>
+   </S:Body>
+</S:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://microsretail.com/Locate/Locate/OrderSearchResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="${#Project#username}" password="${#Project#password}" wssType="" incomingWss="" wssTimeToLive="" outgoingWss="">https://mspnix01:9005/Locate/LocateServices</con:endpoint></con:endpointStrategy><con:properties><con:property><con:name>username</con:name><con:value>posws</con:value></con:property><con:property><con:name>password</con:name><con:value>P@ssw0rd</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
